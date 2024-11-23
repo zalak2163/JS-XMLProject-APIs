@@ -1,0 +1,16 @@
+html
+  head
+    title= title
+  body
+    header
+      h1 Music Discovery App
+    .container
+      // This will dynamically display the title passed from the route
+      h1= title
+      .section
+        h3 Your Recent Tracks
+        ul
+          each track in apiData
+            li= track.title + " - " + track.artist
+    footer
+      p &copy; 2024 Music Discovery App
